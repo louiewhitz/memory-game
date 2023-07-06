@@ -1,5 +1,7 @@
-@import '~bootstrap/scss/bootstrap';
-@import 'custom';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
 
   width: 100vw;
@@ -14,17 +16,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.start-page-container {
-      width: 35em !important;
-      height: 25em !important;
-        border-radius: 1em !important;
-        border: '1px solid black';
+/* .start-page-container {
+      // width: 35em !important;
+      // height: 25em !important;
+        // border-radius: 1em !important;
+ 
         padding: 20px;
 
-}
+} */
 
 .start-page-container-header {
-  color: #304859 !important;
+  color: #7191A5 !important;
   font-weight: 700 !important;
 }
 
@@ -34,6 +36,10 @@
 
 .start-page-button-medium {
   background-color: #6395B8 !important;
+}
+
+.start-page-button-light {
+  background-color: #A7C4D8 !important;
 }
 .memory-header {
   background-color: #152938;
@@ -46,3 +52,11 @@
     width: 100vw;
     height: 100vh;
 }
+
+.start-game-button {
+  background-color: #Ffb814!important;
+  color: white !important;
+  font-weight: 700 !important;
+}
+
+
