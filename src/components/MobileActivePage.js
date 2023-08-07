@@ -1,56 +1,25 @@
 import React, { useState, useEffect } from 'react';
-
-
-// import Cards from './Cards';
-
+import Cards from './Icons';
 
 import { useLocation, useNavigate } from 'react-router-dom';
 
-const ActivePage = () => {
+const MobileActivePage = () => {
   const location = useLocation();
-   const navigate = useNavigate();
-  const { theme, players, gridSize } = location.state || {};
+  const navigate = useNavigate();
+  const { theme, players, gridSize } = location.state;
   // const [gameState, setGameState] = useState();
-    const [gameState, setGameState] = useState({
-      theme: '',
-      players: 0,
-      gridSize: [],
-    });
-    const renderGrid = () => {
-      const rows = gridSize[0];
-      const cols = gridSize[1];
-      const grid = [];
+  const [gameState, setGameState] = useState({
+    theme: '',
+    players: 0,
+    gridSize: [],
+  });
 
-      for (let i = 0; i < rows; i++) {
-        const rowItems = [];
-        for (let j = 0; j < cols; j++) {
-          // This is just a placeholder. You can modify to display actual content.
-          rowItems.push(
-            <div key={`${i}-${j}`} className="grid-item">
-              Item
-            </div>
-          );
-        }
-        grid.push(
-          <div key={i} className="grid-row">
-            {rowItems}
-          </div>
-        );
-      }
-
-      return grid;
-    };
-
-    // const gridClass = `grid grid-cols-${gameState.gridSize[0]} gap-2 border-2 border-red`;
-
-    useEffect(() => {
-      setGameState({ theme, players, gridSize });
-    }, [theme, players, gridSize]);
-
-
+  useEffect(() => {
+    setGameState({ theme, players, gridSize });
+  }, [theme, players, gridSize]);
 
   const newGame = () => {
-   setGameState({ theme, players, gridSize });
+    setGameState({ theme, players, gridSize });
   };
 
   const restart = () => {
@@ -80,9 +49,8 @@ const ActivePage = () => {
             </button>
           </div>
         </div>
-        <div className="flex items-center justify-center min-h-screen  ">
-          <div className="container-md  p-4 bg-white shadow-lg rounded-lg">
-            <div className="grid-cols-4"></div>
+        <div className="flex items-center justify-center min-h-screen  border-black border-2">
+          <div className="container-sm border-black border-2 p-4 bg-white shadow-lg rounded-lg">
             <div className="grid gap-2 border-2 border-red">
               <h2 className="text-lg text-black">Theme: {gameState.theme}</h2>
               <h2 className="text-lg text-black">
@@ -91,7 +59,6 @@ const ActivePage = () => {
               <h2 className="text-lg text-black">
                 Grid Size: {gameState.gridSize?.[0]} x {gameState.gridSize?.[1]}
               </h2>
-              <div className="grid-container">{renderGrid()}</div>
             </div>
           </div>
         </div>
@@ -100,4 +67,4 @@ const ActivePage = () => {
   );
 };
 
-export default ActivePage;
+export default MobileActivePage;

@@ -64,13 +64,13 @@ const handleGridSizeClick = (e) =>
                   onClick={handleGridSizeClick}
                   className="flex-1 start-page-button-dark  text-white py-2 px-4 rounded-3xl"
                 >
-                  4x4
+                  3
                 </button>
                 <button
                   onClick={handleGridSizeClick}
                   className="flex-1 start-page-button-light text-white py-2 px-4 rounded-3xl"
                 >
-                  6x6
+                  4
                 </button>
               </div>
             </div>
