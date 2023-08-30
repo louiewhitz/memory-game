@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+// eslint-disable-next-line
+import { gameOptions } from '../data/gameOptions';
+
 
 const StartPage = () => {
    const [theme, setTheme] = useState('');
